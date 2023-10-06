@@ -23,6 +23,7 @@
         <option value="3">CARNES</option>
         <option value="4">LACTEOS</option>
         <option value="5">ASEO</option>
+        <option value="6">PULPAS</option>
         
       </select>
     </div>

@@ -49,7 +49,7 @@
                          </td>
 
                          <td>
-							<a href="?c=Categorias&a=eliminarCategorias&categoria_codigo=<?php echo $categoria->getcategoria_codigo() ?>"
+							<a href="?c=Categorias&a=eliminarCategorias&usuario_codigo=<?php echo $categoria->getusuario_codigo() ?>"
 								class="btn btn-warning">
 								<i class="far fa-trash-alt"></i>
 							</a>

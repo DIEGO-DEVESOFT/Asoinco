@@ -22,14 +22,15 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 col-md-4">
+                    <div class="form-group">
+                            <label for="item_nombre" class="bmd-label-floating">Nombre Rol:</label>
+                            <input type="text" pattern="[a-zA-záéíóúÁÉÍÓÚñÑ0-9 ]{1,140}" class="form-control" name="nombreRol" id="item_nombre" maxlength="140" value="<?php echo $rol->getRolName() ?>" required>
+                        </div>
                         <div class="form-group">
                             <label for="item_nombre" class="bmd-label-floating"></label>                            
                             <input type="hidden" pattern="[a-zA-záéíóúÁÉÍÓÚñÑ0-9 ]{1,140}" class="form-control" name="codigoRol" id="item_nombre" maxlength="140" value="<?php echo $rol->getRolCode() ?>">
                         </div>
-                        <div class="form-group">
-                            <label for="item_nombre" class="bmd-label-floating">Nombre Rol:</label>
-                            <input type="text" pattern="[a-zA-záéíóúÁÉÍÓÚñÑ0-9 ]{1,140}" class="form-control" name="nombreRol" id="item_nombre" maxlength="140" value="<?php echo $rol->getRolName() ?>" required>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

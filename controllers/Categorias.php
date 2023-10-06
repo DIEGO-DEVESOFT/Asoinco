@@ -54,19 +54,19 @@
             $rol = $_SESSION['rol'];
             if ($rol == 1) {
                 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-                    $Categoria = new Categoria;
-                    $Categoria = $Categoria->obtenerCategoriaPorId($_GET['categoria_codigo']);
+                    $categoria = new Categoria;
+                    $categoria = $categoria->obtenerCategoriaPorId($_GET['categoria_codigo']);
                     require_once "views/roles/admin/header1.view.php";
                     require_once "views/modules/actualizar_categoria/actualizar_categoria.view.php";
                     require_once "views/roles/admin/footer.view.php";                
                 }
                 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                    $Categoria = new Categoria(
+                    $categoria = new Categoria(
                         $_POST['categoria_codigo'],
                         $_POST['usuario_codigo'],
                         $_POST['nombre_categoria']
                     );                
-                    $Categoria->actualizarCategoria();
+                    $categoria->actualizarCategoria();
                     header("Location: ?c=Categorias&a=consultarCategoria");
                 }
             } else {                
@@ -75,8 +75,8 @@
         }
 
         public function eliminarCategorias(){
-            $Categoria = new Categoria;            
-            $Categoria->eliminarCategoria($_GET['categoria_codigo']);
+            $categoria = new Categoria;            
+            $categoria->eliminarCategoria($_GET['usuario_codigo']);
             header("Location: ?c=Categorias&a=consultarCategoria");
         }
 

@@ -117,11 +117,11 @@
                 $stmt = $this->dbh->prepare($sql);
                 $stmt->bindValue('categoria_codigo', $categoria_codigo);
                 $stmt->execute();
-                $categoriasDb = $stmt->fetch();
+                $categoria = $stmt->fetch();
                 $categoria = new Categoria(
-                    $categoriasDb['categoria_codigo'],
-                    $categoriasDb['usuario_codigo'],
-                    $categoriasDb['nombre_categoria']
+                    $categoria['categoria_codigo'],
+                    $categoria['usuario_codigo'],
+                    $categoria['nombre_categoria']
                 );
                 return $categoria;
             } catch (Exception $e) {
@@ -131,11 +131,11 @@
 
 
         # CU08 - Eliminar Categorias
-        public function eliminarCategoria($categoria_codigo) {
+        public function eliminarCategoria($usuario_codigo) {
             try {
-                $sql = 'DELETE FROM CATEGORIAS WHERE categoria_codigo = :categoria_codigo';
+                $sql = 'DELETE FROM CATEGORIAS WHERE usuario_codigo = :usuario_codigo';
                 $stmt = $this->dbh->prepare($sql);
-                $stmt->bindValue('$categoria_codigo', $categoria_codigo);
+                $stmt->bindValue('$usuario_codigo', $usuario_codigo);
                 $stmt->execute();
             } catch (Exception $e) {
                 die($e->getMessage());
