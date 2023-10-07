@@ -8,12 +8,10 @@
 <div class="container-fluid">
     <ul class="full-box list-unstyled page-nav-tabs">
         <li>
-            <a class="active" href="?c=Roles&a=registrarRoles"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR
-                CATEGORIA</a>
-        </li>
-        <li>
-            <a href="?c=Categorias&a=consultarCategoria"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE
-                CATEGORIA</a>
+            <a class="btn btn-primary" href="?c=Categorias&a=registrarCategorias"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR
+            CATEGORIA</a>
+            <a class="btn btn-primary" href="?c=Categorias&a=consultarCategoria"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE
+            CATEGORIA</a>
         </li>
     </ul>
 </div>
