@@ -32,11 +32,11 @@
             $this->categoria_codigo = $categoria_codigo;
         }
 
-        public function __construct4($productos_codigo, $nombre_producto,$nombre_categoria){
-            $this->productos_codigo = $productos_codigo;
-            $this->nombre_producto = $nombre_producto;
-            $this->nombre_categoria = $nombre_categoria;
-        }
+        // public function __construct4($productos_codigo, $nombre_producto,$nombre_categoria){
+        //     $this->productos_codigo = $productos_codigo;
+        //     $this->nombre_producto = $nombre_producto;
+        //     $this->nombre_categoria = $nombre_categoria;
+        // }
 
         # Métodos: $productos_codigo
         public function setproductos_codigo($productos_codigo){
@@ -82,7 +82,7 @@
             }
         } 
 
-        #----CONSULTAR CATEGORIAS-----------/
+        #----CONSULTAR PRODUCTOS-----------/
 
         public function consultarProductos() {
             try {
@@ -97,6 +97,59 @@
                     );
                 }
                 return $productoList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+
+
+        # CU11 - Actualizar Producto
+        public function actualizarProducto(){
+            try {                
+                $sql = 'UPDATE PRODUCTOS SET
+                            productos_codigo = :productos_codigo,
+                            nombre_producto = :nombre_producto,
+                            categoria_codigo = :categoria_codigo
+                        WHERE productos_codigo = :productos_codigo';
+                $stmt = $this->dbh->prepare($sql);
+                $stmt->bindValue('productos_codigo', $this->getproductos_codigo());
+                $stmt->bindValue('nombre_producto', $this->getnombre_producto());
+                $stmt->bindValue('categoria_codigo', $this->getcategoria_codigo());
+                $stmt->execute();
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        # CU12 - Obtener Producto por Id
+        public function obtenerProductoPorId($productos_codigo){
+            try {
+                $sql = "SELECT * FROM PRODUCTOS WHERE productos_codigo = :productos_codigo";
+                $stmt = $this->dbh->prepare($sql);
+                $stmt->bindValue('productos_codigo', $productos_codigo);
+                $stmt->execute();
+                $producto = $stmt->fetch();
+                $producto = new Producto(
+                    $producto['productos_codigo'],
+                    $producto['nombre_producto'],
+                    // $producto['nombre_categoria']
+                    $producto['categoria_codigo']
+                );
+                return $producto;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+
+        # CU08 - Eliminar Producto
+        public function eliminarProducto($productos_codigo) {
+            try {
+                $sql = 'DELETE FROM PRODUCTOS WHERE productos_codigo = :productos_codigo';
+                $stmt = $this->dbh->prepare($sql);
+                $stmt->bindValue('productos_codigo', $productos_codigo);
+                $stmt->execute();
             } catch (Exception $e) {
                 die($e->getMessage());
             }

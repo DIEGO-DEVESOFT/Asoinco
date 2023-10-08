@@ -47,6 +47,39 @@
             }            
         }
 
+        #-------------- ACTUALIZAR PRODUCTOS ------------- //
+
+        // Actualizar PRODUCTOS
+        public function actualizarProductos(){
+            $rol = $_SESSION['rol'];
+            if ($rol == 1) {
+                if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                    $producto = new Producto;
+                    $producto = $producto->obtenerProductoPorId($_GET['productos_codigo']);
+                    require_once "views/roles/admin/header1.view.php";
+                    require_once "views/modules/actualizar_producto/actualizar_producto.view.php";
+                    require_once "views/roles/admin/footer.view.php";                
+                }
+                if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                    $producto = new Producto(
+                        $_POST['productos_codigo'],
+                        $_POST['nombre_producto'],
+                        $_POST['categoria_codigo']
+                    );                
+                    $producto->actualizarProducto();
+                    header("Location: ?c=Productos&a=consultarProducto");
+                }
+            } else {                
+                header("Location: ?c=Dashboard");
+            }            
+        }
+
+        public function eliminarProductos(){
+            $producto = new Producto;            
+            $producto->eliminarProducto($_GET['productos_codigo']);
+            header("Location: ?c=Productos&a=consultarProducto");
+        }
+
               
     }
 ?>

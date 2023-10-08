@@ -43,12 +43,12 @@
 							<?php echo $producto->getcategoria_codigo(); ?>
 						</td>
 						<td>
-                             <a href="" class="btn btn-success">
+                             <a href="?c=Productos&a=actualizarProductos&productos_codigo=<?php echo $producto->getproductos_codigo() ?>" class="btn btn-success">
                                  <i class="fas fa-sync-alt"></i>
                              </a>
                          </td>
                          <td>
-                             <a href="" class="btn btn-warning">
+                             <a href="?c=Productos&a=eliminarProductos&productos_codigo=<?php echo $producto->getproductos_codigo() ?>" class="btn btn-warning">
                                  <i class="far fa-trash-alt"></i>
                              </a>                             
                          </td> 
