@@ -131,11 +131,11 @@
 
 
         # CU08 - Eliminar Categorias
-        public function eliminarCategoria($usuario_codigo) {
+        public function eliminarCategoria($categoria_codigo) {
             try {
-                $sql = 'DELETE FROM CATEGORIAS WHERE usuario_codigo = :usuario_codigo';
+                $sql = 'DELETE FROM CATEGORIAS WHERE categoria_codigo = :categoria_codigo';
                 $stmt = $this->dbh->prepare($sql);
-                $stmt->bindValue('$usuario_codigo', $usuario_codigo);
+                $stmt->bindValue('categoria_codigo', $categoria_codigo);
                 $stmt->execute();
             } catch (Exception $e) {
                 die($e->getMessage());

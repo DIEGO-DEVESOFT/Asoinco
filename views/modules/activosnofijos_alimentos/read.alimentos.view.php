@@ -11,6 +11,8 @@
 		<li>
 			<a href="?c=Dashboard" class="btn btn-secondary">Atrás</a>
 			<a href="?c=Productos&a=registrarProductos" class="btn btn-primary">Registrar Productos</a>
+			<a href="?c=Categorias&a=registrarCategorias" class="btn btn-primary">Registrar Categoria</a>
+			<a href="?c=Categorias&a=consultarCategoria" class="btn btn-primary">Consultar Categorias</a>
 		</li>
 		<br>
 	</ul>

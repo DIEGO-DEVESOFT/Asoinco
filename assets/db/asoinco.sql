@@ -103,7 +103,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`rol_codigo`, `usuario_codigo`, `usuario_nombre`, `usuario_apellido`, `usuario_correo`, `usuario_pass`, `usuario_estado`) VALUES
-(1, 1, 'Diego', 'Pinzon', 'Diegos@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1);
+(1, 1, 'Diego', 'Pinzon', 'Diegos@gmail.com', SHA1('123'), 1);
 
 --
 -- Índices para tablas volcadas
@@ -155,7 +155,7 @@ ALTER TABLE `roles`
 -- Filtros para la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  ADD CONSTRAINT `fk_CATEGORIAS_USUARIOS` FOREIGN KEY (`usuario_codigo`) REFERENCES `usuarios` (`usuario_codigo`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_CATEGORIAS_USUARIOS` FOREIGN KEY (`usuario_codigo`) REFERENCES `usuarios` (`usuario_codigo`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `productos`

@@ -11,6 +11,8 @@
 		<li>
 			<a href="?c=Dashboard" class="btn btn-secondary">Atrás</a>
 			<a href="?c=Categorias&a=registrarCategorias" class="btn btn-primary">Registrar Categoria</a>
+			<a href="?c=Productos&a=registrarProductos" class="btn btn-primary">Registrar Productos</a>
+			<a href="?c=Productos&a=consultarProducto" class="btn btn-primary">Consultar Productos</a>
 			
 			
 		</li>
@@ -49,7 +51,7 @@
                          </td>
 
                          <td>
-							<a href="?c=Categorias&a=eliminarCategorias&usuario_codigo=<?php echo $categoria->getusuario_codigo() ?>"
+							<a href="?c=Categorias&a=eliminarCategorias&categoria_codigo=<?php echo $categoria->getcategoria_codigo() ?>"
 								class="btn btn-warning">
 								<i class="far fa-trash-alt"></i>
 							</a>

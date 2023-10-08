@@ -76,7 +76,7 @@
 
         public function eliminarCategorias(){
             $categoria = new Categoria;            
-            $categoria->eliminarCategoria($_GET['usuario_codigo']);
+            $categoria->eliminarCategoria($_GET['categoria_codigo']);
             header("Location: ?c=Categorias&a=consultarCategoria");
         }
 
