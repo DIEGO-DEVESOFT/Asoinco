@@ -1,11 +1,6 @@
-DROP DATABASE prueba;
--- -----------------------------------------------------
--- Schema bbdd_app_web_compras_linea
--- -----------------------------------------------------
-CREATE DATABASE prueba DEFAULT CHARACTER SET utf8 ;
-USE prueba ;
-
-
+drop database prueba;
+create database prueba;
+use prueba;
 --
 -- Base de datos: `prueba`
 --
@@ -27,14 +22,54 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`categoria_codigo`, `usuario_codigo`, `nombre_categoria`) VALUES
-(1, 1, 'ABARROTES'),
-(2, 1, 'FRUVER'),
+(1, 1, 'PULPAS'),
+(2, 1, 'CARNES'),
 (3, 1, 'LACTEOS'),
-(4, 1, 'CARNES'),
-(5, 1, 'ASEO'),
-(6, 1, 'POLLO'),
-(7, 1, 'GASTOS'),
-(8, 1, 'nuevo');
+(4, 1, 'FRUVER'),
+(5, 1, 'ABARROTES'),
+(6, 1, 'POLLO');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `comedores`
+--
+
+CREATE TABLE `comedores` (
+  `comedores_codigo` int(50) NOT NULL,
+  `nombre_comedor` varchar(80) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `comedores`
+--
+
+INSERT INTO `comedores` (`comedores_codigo`, `nombre_comedor`) VALUES
+(1, 'BUENA VISTA'),
+(2, 'NUEVO CHILE'),
+(3, 'SEMILLAS'),
+(4, 'SANTA CECILIA');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `facturas`
+--
+
+CREATE TABLE `facturas` (
+  `facturas_codigo` int(100) NOT NULL,
+  `valor_factura` varchar(80) CHARACTER SET utf32 COLLATE utf32_spanish2_ci NOT NULL,
+  `fecha` varchar(80) CHARACTER SET utf8 COLLATE utf8_spanish2_ci NOT NULL,
+  `categoria_codigo` int(11) NOT NULL,
+  `comedores_codigo` int(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `facturas`
+--
+
+INSERT INTO `facturas` (`facturas_codigo`, `valor_factura`, `fecha`, `categoria_codigo`, `comedores_codigo`) VALUES
+(123, '1.455.525', '09/10/2023', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -53,10 +88,12 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`productos_codigo`, `nombre_producto`, `categoria_codigo`) VALUES
-(1, 'PAPEL HIGIENICO', 5),
-(2, 'JABON DE MANOS', 5),
-(3, 'POLLO', 6),
-(7, 'ESPINACAS', 1);
+(1, 'PULPA DE LULO', 1),
+(2, 'CARNE RES', 2),
+(3, 'LECHE', 3),
+(4, 'CEBOLLA CABEZONA', 4),
+(5, 'ARROZ', 5),
+(6, 'PECHUGA', 6);
 
 -- --------------------------------------------------------
 
@@ -103,7 +140,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`rol_codigo`, `usuario_codigo`, `usuario_nombre`, `usuario_apellido`, `usuario_correo`, `usuario_pass`, `usuario_estado`) VALUES
-(1, 1, 'Diego', 'Pinzon', 'Diegos@gmail.com', SHA1('123'), 1);
+(1, 1, 'Diego', 'Pinzon', 'Diegos@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1);
 
 --
 -- Índices para tablas volcadas
@@ -118,11 +155,24 @@ ALTER TABLE `categorias`
   ADD KEY `fk_CATEGORIAS_USUARIOS` (`usuario_codigo`);
 
 --
+-- Indices de la tabla `comedores`
+--
+ALTER TABLE `comedores`
+  ADD PRIMARY KEY (`comedores_codigo`);
+
+--
+-- Indices de la tabla `facturas`
+--
+ALTER TABLE `facturas`
+  ADD PRIMARY KEY (`facturas_codigo`),
+  ADD KEY `fk_facturas_categorias` (`categoria_codigo`),
+  ADD KEY `comedores_codigo` (`comedores_codigo`);
+
+--
 -- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
-  ADD PRIMARY KEY (`productos_codigo`),
-  ADD KEY `ind_productos_categorias` (`categoria_codigo`);
+  ADD KEY `fk_productos_categorias` (`categoria_codigo`);
 
 --
 -- Indices de la tabla `roles`
@@ -158,6 +208,13 @@ ALTER TABLE `categorias`
   ADD CONSTRAINT `fk_CATEGORIAS_USUARIOS` FOREIGN KEY (`usuario_codigo`) REFERENCES `usuarios` (`usuario_codigo`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Filtros para la tabla `facturas`
+--
+ALTER TABLE `facturas`
+  ADD CONSTRAINT `facturas_ibfk_1` FOREIGN KEY (`comedores_codigo`) REFERENCES `comedores` (`comedores_codigo`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_facturas_categorias` FOREIGN KEY (`categoria_codigo`) REFERENCES `categorias` (`categoria_codigo`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
 -- Filtros para la tabla `productos`
 --
 ALTER TABLE `productos`
@@ -168,6 +225,4 @@ ALTER TABLE `productos`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `fk_usuarios_roles` FOREIGN KEY (`rol_codigo`) REFERENCES `roles` (`rol_codigo`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
-
 

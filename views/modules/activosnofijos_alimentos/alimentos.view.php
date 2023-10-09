@@ -18,12 +18,12 @@
     <div class="form-group">
       <select class="form-control" name="categoria_codigo" required>
         <option value="" selected="" disabled="">Seleccione Categoria</option>
-        <option value="1">ABARROTES</option>
-        <option value="2">FRUVER</option>
-        <option value="3">CARNES</option>
-        <option value="4">LACTEOS</option>
-        <option value="5">ASEO</option>
-        <option value="6">PULPAS</option>
+        <option value="1">PULPAS</option>
+        <option value="2">CARNES</option>
+        <option value="3">LACTEOS</option>
+        <option value="4">FRUVER</option>
+        <option value="5">ABARROTES</option>
+        <option value="6">POLLO</option>
         
       </select>
     </div>
