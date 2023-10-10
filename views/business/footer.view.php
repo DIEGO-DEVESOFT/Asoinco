@@ -2,7 +2,7 @@
 <footer>
     <br>
     <h6 class="centrar"><b>ASOCIACIÓN DE INTEGRACIÓN COMUNITARIA ASOINCO</b></h6>
-    <h6 class="centrar"><b>&copy; DERECHOS RESERVADOS DE AUTOR 2023</b></h6>
+    <h6 class="centrar"><b>&copy; DEVESOFT D&E</b></h6>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
