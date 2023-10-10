@@ -63,6 +63,10 @@
                             <a href="?c=Productos&a=registrarProductos" class="btn btn-primary padin1">REGISTRAR PRODUCTOS</a>
 
                             <a href="?c=Productos&a=consultarProducto" class="btn btn-primary padin1">CONSULTAR PRODUCTOS</a>
+
+                            <a href="?c=FacturasControllers&a=registrarFacturasControllers" class="btn btn-primary padin1">REGISTRAR FACTURA</a>
+
+                            <a href="?c=FacturasControllers&a=consultarFacturasControllers" class="btn btn-primary padin1">CONSULTAR FACTURAS</a>
                             
                         </div>
                     </div>
