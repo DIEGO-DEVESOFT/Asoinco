@@ -39,15 +39,65 @@
             }            
         }
 
-        // public function consultarCategoriasReporte(){
-        //     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        //         $categorias = new Categoria;
-        //         $categorias = $categorias->consultarCategorias();
-        //         require_once "views/roles/Admin/header1.view.php";
-        //         require_once "views/modules/registrar_categoria/reporte_categorias.view.php";
-        //         require_once "views/roles/admin/footer.view.php";
-        //     }            
-        // }
+        public function consultarFacturasControllersReporte(){
+             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                 $facturas = new FacturaModels;
+                 $facturas = $facturas->consultarFacturasModels();
+                 require_once "views/roles/Admin/header1.view.php";
+                 require_once "views/modules/consultar_factura/reporte_facturas.view.php";
+                 require_once "views/roles/admin/footer.view.php";
+             }            
+        }
+
+        // Consultar Facturas Nuevo Chile
+
+        public function consultarFacturasControllersNuevoChileReporte(){
+            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                $facturas = new FacturaModels;
+                $facturas = $facturas->consultarFacturasModelsNuevoChile();
+                require_once "views/roles/Admin/header1.view.php";
+                require_once "views/modules/consultar_factura/reporte_facturas.view.php";
+                require_once "views/roles/admin/footer.view.php";
+            }            
+        }
+
+        // Consultar Facturas Semillas
+
+
+        public function consultarFacturasControllersSemillasReporte(){
+            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                $facturas = new FacturaModels;
+                $facturas = $facturas->consultarFacturasModelsSemillas();
+                require_once "views/roles/Admin/header1.view.php";
+                require_once "views/modules/consultar_factura/reporte_facturas.view.php";
+                require_once "views/roles/admin/footer.view.php";
+            }            
+        }
+
+        // Consultar Facturas Buenavista
+
+
+        public function consultarFacturasControllersBuenavistaReporte(){
+            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                $facturas = new FacturaModels;
+                $facturas = $facturas->consultarFacturasModelsBuenavista();
+                require_once "views/roles/Admin/header1.view.php";
+                require_once "views/modules/consultar_factura/reporte_facturas.view.php";
+                require_once "views/roles/admin/footer.view.php";
+            }            
+        }
+
+        // Consultar Facturas Santa Cecilia
+
+        public function consultarFacturasControllersSantaCeciliaReporte(){
+            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                $facturas = new FacturaModels;
+                $facturas = $facturas->consultarFacturasModelsSantaCecilia();
+                require_once "views/roles/Admin/header1.view.php";
+                require_once "views/modules/consultar_factura/reporte_facturas.view.php";
+                require_once "views/roles/admin/footer.view.php";
+            }            
+        }
 
         // #-------------- ACTUALIZAR CATEGORIAS ------------- //
 

@@ -49,6 +49,14 @@
                             <a href="?c=Users&a=consultarAspirante" class="btn btn-primary padin1">LISTA ASPIRANTES</a>
 
                             <a href="?c=Users&a=consultarBeneficiario" class="btn btn-primary padin1">LISTA BENEFICIARIOS</a>
+
+                            <a href="?c=FacturasControllers&a=consultarFacturasControllersNuevoChileReporte" class="btn btn-primary padin1">LISTA FACTURAS NUEVO CHILE</a>
+
+                            <a href="?c=FacturasControllers&a=consultarFacturasControllersSemillasReporte" class="btn btn-primary padin1">LISTA FACTURAS SEMILLAS</a>
+
+                            <a href="?c=FacturasControllers&a=consultarFacturasControllersBuenavistaReporte" class="btn btn-primary padin1">LISTA FACTURAS BUENAVISTA</a>
+
+                            <a href="?c=FacturasControllers&a=consultarFacturasControllersSantaCeciliaReporte" class="btn btn-primary padin1">LISTA FACTURAS SANTA CECILIA</a>
                         </div>
                     </div>
                     <div class="card">
@@ -81,6 +89,8 @@
                             <a href="?c=Productos&a=consultarProductoReporte" class="btn btn-primary padin1">PRODUCTOS REGISTRADOS</a>
 
                             <a href="?c=Categorias&a=consultarCategoriasReporte" class="btn btn-primary padin1">CATEGORIAS REGISTRADAS</a>
+
+                            <a href="?c=FacturasControllers&a=consultarFacturasControllersReporte" class="btn btn-primary padin1">FACTURAS REGISTRADAS</a>
 
                 
                         </div>

@@ -91,7 +91,7 @@
             }
         } 
 
-        #----CONSULTAR CATEGORIAS-----------/
+        #----CONSULTAR FACTURAS-----------/
 
         public function consultarFacturasModels() {
             try {
@@ -114,6 +114,109 @@
                 die($e->getMessage());
             }
         }
+
+
+        #Consultar Facturas Nuevo Chile
+
+        public function consultarFacturasModelsNuevoChile() {
+            try {
+                $facturaList = [];
+                $sql = 'SELECT facturas.facturas_codigo,facturas.valor_factura,facturas.fecha,categorias.nombre_categoria,comedores.nombre_comedor
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 2';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturas) {
+                    $facturaList[] = new FacturaModels(
+                        $facturas['facturas_codigo'],
+                        $facturas['valor_factura'],
+                        $facturas['fecha'],
+                        $facturas['nombre_categoria'],
+                        $facturas['nombre_comedor'],
+                    );
+                }
+                return $facturaList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        #Consultar Facturas Semillas
+
+        public function consultarFacturasModelsSemillas() {
+            try {
+                $facturaList = [];
+                $sql = 'SELECT facturas.facturas_codigo,facturas.valor_factura,facturas.fecha,categorias.nombre_categoria,comedores.nombre_comedor
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 3';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturas) {
+                    $facturaList[] = new FacturaModels(
+                        $facturas['facturas_codigo'],
+                        $facturas['valor_factura'],
+                        $facturas['fecha'],
+                        $facturas['nombre_categoria'],
+                        $facturas['nombre_comedor'],
+                    );
+                }
+                return $facturaList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        #Consultar Facturas Buenavista
+
+        public function consultarFacturasModelsBuenavista() {
+            try {
+                $facturaList = [];
+                $sql = 'SELECT facturas.facturas_codigo,facturas.valor_factura,facturas.fecha,categorias.nombre_categoria,comedores.nombre_comedor
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 1';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturas) {
+                    $facturaList[] = new FacturaModels(
+                        $facturas['facturas_codigo'],
+                        $facturas['valor_factura'],
+                        $facturas['fecha'],
+                        $facturas['nombre_categoria'],
+                        $facturas['nombre_comedor'],
+                    );
+                }
+                return $facturaList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        #Consultar Facturas Buenavista
+
+        public function consultarFacturasModelsSantaCecilia() {
+            try {
+                $facturaList = [];
+                $sql = 'SELECT facturas.facturas_codigo,facturas.valor_factura,facturas.fecha,categorias.nombre_categoria,comedores.nombre_comedor
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 4';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturas) {
+                    $facturaList[] = new FacturaModels(
+                        $facturas['facturas_codigo'],
+                        $facturas['valor_factura'],
+                        $facturas['fecha'],
+                        $facturas['nombre_categoria'],
+                        $facturas['nombre_comedor'],
+                    );
+                }
+                return $facturaList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+
 
          # CU11 - Actualizar Categoria
          public function actualizarFacturaModels(){

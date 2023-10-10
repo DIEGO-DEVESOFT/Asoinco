@@ -4,7 +4,8 @@
 		<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE FACTURAS
 		<hr>
 	</h3>
-    <a href="?c=Dashboard" class="btn btn-secondary">Atrás</a><br><hr>
+    <a href="?c=Dashboard" class="btn btn-secondary">Atrás</a>
+	<a href="?c=FacturasControllers&a=registrarFacturasControllers" class="btn btn-primary">REGISTRAR FACTURA</a><br><hr>
 </div>
 
 
