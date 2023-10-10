@@ -1,28 +1,28 @@
 <body>
     <div class="col-md-8 col-md-offset-2">
-        <h3 class="centrar">REGISTRAR FACTURA</h3>
+        <h3 class="centrar">ACTUALIZAR FACTURA</h3>
         <form action="" method="post" class="form-neon" autocomplete="off">
             <fieldset>
-                <i class="fas fa-clipboard-list fa-fw"></i> &nbsp; <b>Crear Factura</b></legend>
+                <i class="fas fa-clipboard-list fa-fw"></i> &nbsp; <b>Actualizar Factura</b></legend>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <div class="form-group">
                                 <label for="facturas_codigo" class="bmd-label-floating">Código Factura</label>
-                                <input type="text" pattern="[0-9-]{1,20}" class="form-control" name="facturas_codigo" id="facturas_codigo" maxlength="20" required>
+                                <input type="text" pattern="[0-9-]{1,20}" class="form-control" name="facturas_codigo" id="facturas_codigo" maxlength="20" value="<?php echo $facturas->getfacturas_codigo() ?>" required>
                             </div>
                         </div>
 
                         <div class="col-12 col-md-4">
                             <div class="form-group">
                                 <label for="valor_factura" class="bmd-label-floating">Valor Factura:</label>
-                                <input type="number" class="form-control" name="valor_factura" id="valor_factura" maxlength="35" required>
+                                <input type="number" class="form-control" name="valor_factura" id="valor_factura" maxlength="35" value="<?php echo $facturas->getvalor_factura() ?>" required>
                             </div>
                         </div>
                         <div class="col-12 col-md-4">
                             <div class="form-group">
                                 <label for="fecha" class="bmd-label-floating">Fecha Ingreso:</label>
-                                <input type="date" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,35}" class="form-control" name="fecha" id="fecha" maxlength="35" required>
+                                <input type="date" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,35}" class="form-control" name="fecha" id="fecha" maxlength="35" value="<?php echo $facturas->getfecha() ?>" required>
                             </div>
                         </div>
 
@@ -58,8 +58,7 @@
             <br><br><br>
 
             <p class="text-center" style="margin-top: 40px;">
-                <a type="submit" href="?c=FacturasControllers&a=registrarFacturasControllers" class="btn bg-secondary text-white">Cancelar</a>
-                <input class="btn btn-success letra3" type="submit" value="Registrar Factura">
+                <input class="btn btn-success letra3" type="submit" value="Actualizar Factura">
 
                 <a href="?c=FacturasControllers&a=consultarFacturasControllers" class="btn btn-primary"> Lista De Facturas</a>
 

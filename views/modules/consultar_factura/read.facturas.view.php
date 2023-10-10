@@ -42,13 +42,13 @@
 							<?php echo $facturas->getcomedores_codigo(); ?>
 						</td>
 						<td>
-							<a href=""
+							<a href="?c=FacturasControllers&a=actualizarFacturasControllers&facturas_codigo=<?php echo $facturas->getfacturas_codigo() ?>"
 								class="btn btn-success">
 								<i class="fas fa-sync-alt"></i>
 							</a>
 						</td>
 						<td>
-							<a href=""
+							<a href="?c=FacturasControllers&a=eliminarFacturasControllers&facturas_codigo=<?php echo $facturas->getfacturas_codigo() ?>"
 								class="btn btn-warning">
 								<i class="far fa-trash-alt"></i>
 							</a>

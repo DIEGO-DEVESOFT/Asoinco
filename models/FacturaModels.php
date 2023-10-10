@@ -115,54 +115,60 @@
             }
         }
 
-        // # CU11 - Actualizar Categoria
-        // public function actualizarCategoria(){
-        //     try {                
-        //         $sql = 'UPDATE CATEGORIAS SET
-        //                     categoria_codigo = :categoria_codigo,
-        //                     usuario_codigo = :usuario_codigo,
-        //                     nombre_categoria = :nombre_categoria
-        //                 WHERE categoria_codigo = :categoria_codigo';
-        //         $stmt = $this->dbh->prepare($sql);
-        //         $stmt->bindValue('categoria_codigo', $this->getcategoria_codigo());
-        //         $stmt->bindValue('usuario_codigo', $this->getusuario_codigo());
-        //         $stmt->bindValue('nombre_categoria', $this->getnombre_categoria());
-        //         $stmt->execute();
-        //     } catch (Exception $e) {
-        //         die($e->getMessage());
-        //     }
-        // }
+         # CU11 - Actualizar Categoria
+         public function actualizarFacturaModels(){
+             try {                
+                 $sql = 'UPDATE FACTURAS SET
+                            facturas_codigo = :facturas_codigo,
+                            valor_factura = :valor_factura,
+                            fecha = :fecha,
+                            categoria_codigo = :categoria_codigo,
+                            comedores_codigo = :comedores_codigo
+                         WHERE facturas_codigo = :facturas_codigo';
+                 $stmt = $this->dbh->prepare($sql);
+                 $stmt->bindValue('facturas_codigo', $this->getfacturas_codigo());
+                 $stmt->bindValue('valor_factura', $this->getvalor_factura());
+                 $stmt->bindValue('fecha', $this->getfecha());
+                 $stmt->bindValue('categoria_codigo', $this->getcategoria_codigo());
+                 $stmt->bindValue('comedores_codigo', $this->getcomedores_codigo());
+                 $stmt->execute();
+             } catch (Exception $e) {
+                 die($e->getMessage());
+             }
+         }
 
-        // # CU12 - Obtener Categoria por Id
-        // public function obtenerCategoriaPorId($categoria_codigo){
-        //     try {
-        //         $sql = "SELECT * FROM CATEGORIAS WHERE categoria_codigo = :categoria_codigo";
-        //         $stmt = $this->dbh->prepare($sql);
-        //         $stmt->bindValue('categoria_codigo', $categoria_codigo);
-        //         $stmt->execute();
-        //         $categoria = $stmt->fetch();
-        //         $categoria = new Categoria(
-        //             $categoria['categoria_codigo'],
-        //             $categoria['usuario_codigo'],
-        //             $categoria['nombre_categoria']
-        //         );
-        //         return $categoria;
-        //     } catch (Exception $e) {
-        //         die($e->getMessage());
-        //     }
-        // }
+         # CU12 - Obtener Factura por Id
+         public function obtenerFacturaPorId($facturas_codigo){
+             try {
+                 $sql = "SELECT * FROM FACTURAS WHERE facturas_codigo = :facturas_codigo";
+                 $stmt = $this->dbh->prepare($sql);
+                 $stmt->bindValue('facturas_codigo', $facturas_codigo);
+                 $stmt->execute();
+                 $facturas = $stmt->fetch();
+                 $facturas = new FacturaModels(
+                     $facturas['facturas_codigo'],
+                     $facturas['valor_factura'],
+                     $facturas['fecha'],
+                     $facturas['categoria_codigo'],
+                     $facturas['comedores_codigo']
+                 );
+                 return $facturas;
+             } catch (Exception $e) {
+                 die($e->getMessage());
+             }
+         }
 
 
-        // # CU08 - Eliminar Categorias
-        // public function eliminarCategoria($categoria_codigo) {
-        //     try {
-        //         $sql = 'DELETE FROM CATEGORIAS WHERE categoria_codigo = :categoria_codigo';
-        //         $stmt = $this->dbh->prepare($sql);
-        //         $stmt->bindValue('categoria_codigo', $categoria_codigo);
-        //         $stmt->execute();
-        //     } catch (Exception $e) {
-        //         die($e->getMessage());
-        //     }
-        // }
+         # CU08 - Eliminar Facturas
+         public function eliminarFacturaModels($facturas_codigo) {
+             try {
+                 $sql = 'DELETE FROM FACTURAS WHERE facturas_codigo = :facturas_codigo';
+                 $stmt = $this->dbh->prepare($sql);
+                 $stmt->bindValue('facturas_codigo', $facturas_codigo);
+                 $stmt->execute();
+             } catch (Exception $e) {
+                 die($e->getMessage());
+             }
+         }
     }
 ?>
