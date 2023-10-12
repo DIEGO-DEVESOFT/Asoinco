@@ -1,4 +1,5 @@
 <table id="example" class="display nowrap" style="width:100%">
+<a href="?c=Dashboard" class="btn btn-secondary">Atrás</a><br><hr>
 
 	<thead>
 	
@@ -21,7 +22,7 @@
 		</tr>
 		<?php endforeach; ?>
 	</tbody>
-	<a href="?c=Dashboard" class="btn btn-secondary">Atrás</a>
+	
 	<tfoot>
 		<tr>
             <th>Código Rol</th>

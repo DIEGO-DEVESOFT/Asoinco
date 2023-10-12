@@ -20,6 +20,7 @@
 	</ul>
 </div>
 <!-- Content -->
+
 <div class="container-fluid">
 	<div class="table-responsive">
 		<table class="table table-dark table-sm">

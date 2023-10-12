@@ -64,9 +64,9 @@
 
                             <h5 class="card-title centrar inv1 letra3"><b>INVENTARIO</b></h5>
 
-                            <a href="?c=Categorias&a=registrarCategorias" class="btn btn-warning padin1">REGISTRAR CATEGORIA</a>
+                            <a href="?c=Categorias&a=registrarCategorias" class="btn btn-info padin1">REGISTRAR CATEGORIA</a>
 
-                            <a href="?c=Categorias&a=consultarCategoria" class="btn btn-warning padin1">CONSULTAR CATEGORIA</a>
+                            <a href="?c=Categorias&a=consultarCategoria" class="btn btn-info padin1">CONSULTAR CATEGORIA</a>
 
                             <a href="?c=Productos&a=registrarProductos" class="btn btn-dark padin1">REGISTRAR PRODUCTOS</a>
 
@@ -88,7 +88,7 @@
 
                             <a href="?c=Productos&a=consultarProductoReporte" class="btn btn-dark padin1">PRODUCTOS REGISTRADOS</a>
 
-                            <a href="?c=Categorias&a=consultarCategoriasReporte" class="btn btn-warning padin1">CATEGORIAS REGISTRADAS</a>
+                            <a href="?c=Categorias&a=consultarCategoriasReporte" class="btn btn-info padin1">CATEGORIAS REGISTRADAS</a>
 
                             <a href="?c=FacturasControllers&a=consultarFacturasControllersReporte" class="btn btn-success padin1">FACTURAS REGISTRADAS</a>
 
