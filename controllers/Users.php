@@ -28,27 +28,7 @@
             }            
         }
 
-        #------------REGISTRAR CATEGORIA------------//
-
-        // public function registrarCategoria(){
-        //     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        //         require_once "views/roles/Admin/header1.view.php";
-        //         require_once "views/modules/registrar_categoria/registrar_categoria.view.php";            
-        //         require_once "views/roles/Admin/footer.view.php";
-        //     }
-        //     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        //         $categoria = new Categoria(
-        //             $_POST['categoria_codigo'],
-        //             $_POST['usuario_codigo'],
-        //             $_POST['nombre_categoria']
-        //         );
-        //         $categoria->registrarCategoria();
-        //         // header("Location: ?c=Users&a=consultarEmpleados");
-        //         header("Location: ?c=Users&a=registarCategoria");
-        //     }            
-        // }
-
-
+      
         public function consultarBeneficiario(){
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 $users = new User;

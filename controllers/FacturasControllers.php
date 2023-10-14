@@ -1,5 +1,6 @@
 <?php session_start();
     require_once "models/FacturaModels.php";
+    require_once "models/TotalFacturas.php";
     class FacturasControllers{
         public function __construct(){}
         public function index(){
@@ -128,11 +129,14 @@
              }            
          }
 
-         public function eliminarFacturasControllers(){
+        public function eliminarFacturasControllers(){
              $facturas = new FacturaModels;            
              $facturas->eliminarFacturaModels($_GET['facturas_codigo']);
              header("Location: ?c=FacturasControllers&a=consultarFacturasControllers");
-         }
+        }
+
+
+        
 
               
     }

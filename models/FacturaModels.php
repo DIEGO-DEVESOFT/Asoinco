@@ -21,6 +21,13 @@
                 die($e->getMessage());
             }
         }
+        
+        public function __construct1($valor_factura, $categoria_codigo, $comedores_codigo){
+            $this->valor_factura = $valor_factura;
+            $this->categoria_codigo = $categoria_codigo;
+            $this->comedores_codigo = $comedores_codigo;
+            
+        }
 
         public function __construct5($facturas_codigo,$valor_factura,$fecha,$categoria_codigo,$comedores_codigo){
             $this->facturas_codigo = $facturas_codigo;
@@ -216,9 +223,7 @@
             }
         }
 
-
-
-         # CU11 - Actualizar Categoria
+         # CU11 - Actualizar Factura
          public function actualizarFacturaModels(){
              try {                
                  $sql = 'UPDATE FACTURAS SET

@@ -75,6 +75,8 @@
                             <a href="?c=FacturasControllers&a=registrarFacturasControllers" class="btn btn-success padin1">REGISTRAR FACTURA</a>
 
                             <a href="?c=FacturasControllers&a=consultarFacturasControllers" class="btn btn-success padin1">CONSULTAR FACTURAS</a>
+
+                            <a href="?c=TotalFacturasControllers&a=ConsultarTotalFacturasPulpasNuevoChileControllers" class="btn btn-success padin1">CONSULTAR TOTAL FACTURAS</a>
                             
                         </div>
                     </div>
