@@ -57,7 +57,7 @@
                 $facturas = new FacturaModels;
                 $facturas = $facturas->consultarFacturasModelsNuevoChile();
                 require_once "views/roles/Admin/header1.view.php";
-                require_once "views/modules/consultar_factura/reporte_facturas.view.php";
+                require_once "views/modules/consultar_factura/NuevoChile_facturas.view.php";
                 require_once "views/roles/admin/footer.view.php";
             }            
         }
@@ -70,7 +70,7 @@
                 $facturas = new FacturaModels;
                 $facturas = $facturas->consultarFacturasModelsSemillas();
                 require_once "views/roles/Admin/header1.view.php";
-                require_once "views/modules/consultar_factura/reporte_facturas.view.php";
+                require_once "views/modules/consultar_factura/Semillas_facturas.view.php";
                 require_once "views/roles/admin/footer.view.php";
             }            
         }

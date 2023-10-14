@@ -1,7 +1,7 @@
 <!-- Page header -->
 <div class="full-box page-header">
 	<h3 class="text-left">
-		<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; TOTAL PULPAS NUEVO CHILE
+		<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; TOTAL FRUVER NUEVO CHILE
 		<hr>
 		<a href="?c=FacturasControllers&a=consultarFacturasControllersNuevoChileReporte" class="btn btn-secondary">Atrás</a>
 	</h3>

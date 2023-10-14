@@ -1,5 +1,13 @@
 <table id="example" class="display nowrap" style="width:100%">
 <a href="?c=Dashboard" class="btn btn-secondary">Atrás</a>&nbsp;
+<a href="?c=TotalFacturasControllers&a=ConsultarTotalFacturasPulpasSemillasControllers" class="btn btn-success">VALOR TOTAL PULPAS</a>&nbsp;
+<a href="?c=TotalFacturasControllers&a=ConsultarTotalFacturasAbarrotesSemillasControllers" class="btn btn-success">VALOR TOTAL ABARROTES</a>&nbsp;
+<a href="?c=TotalFacturasControllers&a=ConsultarTotalFacturasFruverSemillasControllers" class="btn btn-success">VALOR TOTAL FRUVER</a>&nbsp;
+<hr>
+<a href="?c=TotalFacturasControllers&a=ConsultarTotalFacturasCarnesSemillasControllers" class="btn btn-success">VALOR TOTAL CARNES</a>&nbsp;
+<a href="?c=TotalFacturasControllers&a=ConsultarTotalFacturasLacteosSemillasControllers" class="btn btn-success">VALOR TOTAL LACTEOS</a>&nbsp;
+<a href="?c=TotalFacturasControllers&a=ConsultarTotalFacturasPolloSemillasControllers" class="btn btn-success">VALOR TOTAL POLLO</a>&nbsp;
+<br>
 <hr>
 
 	<thead>
