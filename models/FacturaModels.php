@@ -125,13 +125,15 @@
 
         #Consultar Facturas Nuevo Chile
 
+        
+
         public function consultarFacturasModelsNuevoChile() {
             try {
                 $facturaList = [];
                 $sql = 'SELECT facturas.facturas_codigo,facturas.valor_factura,facturas.fecha,categorias.nombre_categoria,comedores.nombre_comedor
                 FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
                               INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
-                              WHERE facturas.comedores_codigo = 2';
+                              WHERE facturas.comedores_codigo = 2' ;
                 $stmt = $this->dbh->query($sql);
                 foreach ($stmt->fetchAll() as $facturas) {
                     $facturaList[] = new FacturaModels(
@@ -222,6 +224,8 @@
                 die($e->getMessage());
             }
         }
+
+        
 
          # CU11 - Actualizar Factura
          public function actualizarFacturaModels(){

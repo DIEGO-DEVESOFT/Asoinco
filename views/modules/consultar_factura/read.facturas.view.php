@@ -1,6 +1,8 @@
 <table id="example" class="display nowrap" style="width:100%">
 <a href="?c=Dashboard" class="btn btn-secondary">Atrás</a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="?c=FacturasControllers&a=registrarFacturasControllers" class="btn btn-primary">REGISTRAR FACTURA</a><br><hr>
+<a href="?c=FacturasControllers&a=registrarFacturasControllers" class="btn btn-primary">REGISTRAR FACTURA</a>&nbsp;&nbsp;
+<a href="?c=TotalFacturasControllers&a=ConsultarTotalFacturasControllers" class="btn btn-primary">VALOR TOTAL FACTURAS</a>
+<br><hr>
 
 	<thead>
 	

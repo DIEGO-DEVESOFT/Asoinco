@@ -102,6 +102,110 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        public function ConsultarTotalFacturasPulpasBuenavistaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasPulpasBuenavistaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalPulpasBV.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        public function ConsultarTotalFacturasAbarrotesBuenavistaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasAbarrotesBuenavistaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalAbarrotesBV.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        public function ConsultarTotalFacturasFruverBuenavistaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasFruverBuenavistaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalFruverBV.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        public function ConsultarTotalFacturasCarnesBuenavistaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasCarnesBuenavistaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalCarnesBV.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        public function ConsultarTotalFacturasLacteosBuenavistaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasLacteosBuenavistaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalLacteosBV.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        public function ConsultarTotalFacturasPolloBuenavistaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasPolloBuenavistaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalPolloBV.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        public function ConsultarTotalFacturasPulpasSantaCeciliaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasPulpasSantaCeciliaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalPulpasSantaCecilia.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        public function ConsultarTotalFacturasAbarrotesSantaCeciliaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasAbarrotesSantaCeciliaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalAbarrotesSantaCecilia.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        public function ConsultarTotalFacturasFruverSantaCeciliaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasFruverSantaCeciliaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalFruverSantaCecilia.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        public function ConsultarTotalFacturasCarnesSantaCeciliaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasCarnesSantaCeciliaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalCarnesSantaCecilia.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        public function ConsultarTotalFacturasLacteosSantaCeciliaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasLacteosSantaCeciliaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalLacteosSantaCecilia.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        public function ConsultarTotalFacturasPolloSantaCeciliaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasPolloSantaCeciliaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalPolloSantaCecilia.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        public function ConsultarTotalFacturasControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarFacturasTotal();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/consultar_factura/Total_facturas.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
               
     }
 ?>

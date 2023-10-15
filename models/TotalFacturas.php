@@ -19,6 +19,10 @@
                 die($e->getMessage());
             }
         }
+
+        public function __construct1($valor_factura){
+            $this->valor_factura = $valor_factura;
+        }
         
         public function __construct3($valor_factura, $nombre_categoria, $nombre_comedor){
             $this->valor_factura = $valor_factura;
@@ -299,6 +303,276 @@
                         $facturaTotal['ValorTotalPolloSemillas'],
                         $facturaTotal['nombre_categoria'],
                         $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        public function ConsultarTotalFacturasPulpasBuenavistaModels() {
+            try {
+                $facturaTotalList = [];
+                $sql = 'SELECT SUM(valor_factura) AS ValorTotalPulpasBuenavista, comedores.nombre_comedor, categorias.nombre_categoria
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 1 AND categorias.categoria_codigo = 1';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalList[] = new TotalFacturas(
+                        $facturaTotal['ValorTotalPulpasBuenavista'],
+                        $facturaTotal['nombre_categoria'],
+                        $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        public function ConsultarTotalFacturasAbarrotesBuenavistaModels() {
+            try {
+                $facturaTotalList = [];
+                $sql = 'SELECT SUM(valor_factura) AS ValorTotalAbarrotesBuenavista, comedores.nombre_comedor, categorias.nombre_categoria
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 1 AND categorias.categoria_codigo = 5';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalList[] = new TotalFacturas(
+                        $facturaTotal['ValorTotalAbarrotesBuenavista'],
+                        $facturaTotal['nombre_categoria'],
+                        $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        public function ConsultarTotalFacturasFruverBuenavistaModels() {
+            try {
+                $facturaTotalList = [];
+                $sql = 'SELECT SUM(valor_factura) AS ValorTotalFruverBuenavista, comedores.nombre_comedor, categorias.nombre_categoria
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 1 AND categorias.categoria_codigo = 4';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalList[] = new TotalFacturas(
+                        $facturaTotal['ValorTotalFruverBuenavista'],
+                        $facturaTotal['nombre_categoria'],
+                        $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        public function ConsultarTotalFacturasCarnesBuenavistaModels() {
+            try {
+                $facturaTotalList = [];
+                $sql = 'SELECT SUM(valor_factura) AS ValorTotalCarnesBuenavista, comedores.nombre_comedor, categorias.nombre_categoria
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 1 AND categorias.categoria_codigo = 2';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalList[] = new TotalFacturas(
+                        $facturaTotal['ValorTotalCarnesBuenavista'],
+                        $facturaTotal['nombre_categoria'],
+                        $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        public function ConsultarTotalFacturasLacteosBuenavistaModels() {
+            try {
+                $facturaTotalList = [];
+                $sql = 'SELECT SUM(valor_factura) AS ValorTotalLacteosBuenavista, comedores.nombre_comedor, categorias.nombre_categoria
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 1 AND categorias.categoria_codigo = 3';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalList[] = new TotalFacturas(
+                        $facturaTotal['ValorTotalLacteosBuenavista'],
+                        $facturaTotal['nombre_categoria'],
+                        $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        public function ConsultarTotalFacturasPolloBuenavistaModels() {
+            try {
+                $facturaTotalList = [];
+                $sql = 'SELECT SUM(valor_factura) AS ValorTotalPolloBuenavista, comedores.nombre_comedor, categorias.nombre_categoria
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 1 AND categorias.categoria_codigo = 6';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalList[] = new TotalFacturas(
+                        $facturaTotal['ValorTotalPolloBuenavista'],
+                        $facturaTotal['nombre_categoria'],
+                        $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        public function ConsultarTotalFacturasPulpasSantaCeciliaModels() {
+            try {
+                $facturaTotalList = [];
+                $sql = 'SELECT SUM(valor_factura) AS ValorTotalPulpasSantaCecilia, comedores.nombre_comedor, categorias.nombre_categoria
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 4 AND categorias.categoria_codigo = 1';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalList[] = new TotalFacturas(
+                        $facturaTotal['ValorTotalPulpasSantaCecilia'],
+                        $facturaTotal['nombre_categoria'],
+                        $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        public function ConsultarTotalFacturasAbarrotesSantaCeciliaModels() {
+            try {
+                $facturaTotalList = [];
+                $sql = 'SELECT SUM(valor_factura) AS ValorTotalAbarrotesSantaCecilia, comedores.nombre_comedor, categorias.nombre_categoria
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 4 AND categorias.categoria_codigo = 5';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalList[] = new TotalFacturas(
+                        $facturaTotal['ValorTotalAbarrotesSantaCecilia'],
+                        $facturaTotal['nombre_categoria'],
+                        $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        public function ConsultarTotalFacturasFruverSantaCeciliaModels() {
+            try {
+                $facturaTotalList = [];
+                $sql = 'SELECT SUM(valor_factura) AS ValorTotalFruverSantaCecilia, comedores.nombre_comedor, categorias.nombre_categoria
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 4 AND categorias.categoria_codigo = 4';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalList[] = new TotalFacturas(
+                        $facturaTotal['ValorTotalFruverSantaCecilia'],
+                        $facturaTotal['nombre_categoria'],
+                        $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        public function ConsultarTotalFacturasCarnesSantaCeciliaModels() {
+            try {
+                $facturaTotalList = [];
+                $sql = 'SELECT SUM(valor_factura) AS ValorTotalCarnesSantaCecilia, comedores.nombre_comedor, categorias.nombre_categoria
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 4 AND categorias.categoria_codigo = 2';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalList[] = new TotalFacturas(
+                        $facturaTotal['ValorTotalCarnesSantaCecilia'],
+                        $facturaTotal['nombre_categoria'],
+                        $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        public function ConsultarTotalFacturasLacteosSantaCeciliaModels() {
+            try {
+                $facturaTotalList = [];
+                $sql = 'SELECT SUM(valor_factura) AS ValorTotalLacteosSantaCecilia, comedores.nombre_comedor, categorias.nombre_categoria
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 4 AND categorias.categoria_codigo = 3';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalList[] = new TotalFacturas(
+                        $facturaTotal['ValorTotalLacteosSantaCecilia'],
+                        $facturaTotal['nombre_categoria'],
+                        $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        public function ConsultarTotalFacturasPolloSantaCeciliaModels() {
+            try {
+                $facturaTotalList = [];
+                $sql = 'SELECT SUM(valor_factura) AS ValorTotalPolloSantaCecilia, comedores.nombre_comedor, categorias.nombre_categoria
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 4 AND categorias.categoria_codigo = 6';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalList[] = new TotalFacturas(
+                        $facturaTotal['ValorTotalPolloSantaCecilia'],
+                        $facturaTotal['nombre_categoria'],
+                        $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        #Consultar Facturas Total
+
+        public function consultarFacturasTotal() {
+            try {
+                $facturaTotalList = [];
+                $sql = 'SELECT SUM(valor_factura) AS ValorTotalComedores FROM facturas';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalList[] = new TotalFacturas(
+                        $facturaTotal['ValorTotalComedores'],
                     );
                 }
                 return $facturaTotalList;

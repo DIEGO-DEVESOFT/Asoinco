@@ -83,7 +83,7 @@
                 $facturas = new FacturaModels;
                 $facturas = $facturas->consultarFacturasModelsBuenavista();
                 require_once "views/roles/Admin/header1.view.php";
-                require_once "views/modules/consultar_factura/reporte_facturas.view.php";
+                require_once "views/modules/consultar_factura/Buenavista_facturas.view.php";
                 require_once "views/roles/admin/footer.view.php";
             }            
         }
@@ -95,10 +95,12 @@
                 $facturas = new FacturaModels;
                 $facturas = $facturas->consultarFacturasModelsSantaCecilia();
                 require_once "views/roles/Admin/header1.view.php";
-                require_once "views/modules/consultar_factura/reporte_facturas.view.php";
+                require_once "views/modules/consultar_factura/SantaCecilia_facturas.view.php";
                 require_once "views/roles/admin/footer.view.php";
             }            
         }
+
+        
 
         // #-------------- ACTUALIZAR CATEGORIAS ------------- //
 
