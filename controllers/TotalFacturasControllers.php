@@ -176,6 +176,16 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE FRUVER SEMILLAS
+
+        public function ConsultarTotalMensualFacturasFruverSemillasControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesFruverSemillasModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesFruverSemillas.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
         #CONSULTAR EL TOTAL DE LAS FACTURAS DE CARNES SEMILLAS
 
         public function ConsultarTotalFacturasCarnesSemillasControllers(){
