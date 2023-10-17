@@ -4,7 +4,7 @@
 		<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; TOTAL PULPAS BUENAVISTA
 		<hr>
 		<a href="?c=FacturasControllers&a=consultarFacturasControllersBuenavistaReporte" class="btn btn-secondary">Atrás</a>
-		
+		<a href="?c=TotalFacturasControllers&a=ConsultarTotalMensualFacturasPulpasBuenavistaControllers" class="btn btn-success">VALOR MENSUAL PULPAS</a>&nbsp;
 	</h3>
 </div>
 <!-- Content -->

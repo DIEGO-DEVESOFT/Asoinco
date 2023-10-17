@@ -4,12 +4,10 @@
 		<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; TOTAL FRUVER BUENAVISTA
 		<hr>
 		<a href="?c=FacturasControllers&a=consultarFacturasControllersBuenavistaReporte" class="btn btn-secondary">Atrás</a>
+		<a href="?c=TotalFacturasControllers&a=ConsultarTotalMensualFacturasFruverBuenavistaControllers" class="btn btn-success">VALOR MENSUAL FRUVER</a>&nbsp;
 	</h3>
 	
 </div>
-
-
-
 
 <!-- Content -->
 <div class="container-fluid">

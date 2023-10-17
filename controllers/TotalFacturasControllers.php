@@ -256,6 +256,16 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE PULPAS BUENAVISTA
+
+        public function ConsultarTotalMensualFacturasPulpasBuenavistaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesPulpasBuenavistaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesPulpasBuenavista.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
         #CONSULTAR EL TOTAL DE LAS FACTURAS DE ABARROTES BUENAVISTA
 
         public function ConsultarTotalFacturasAbarrotesBuenavistaControllers(){
@@ -263,6 +273,16 @@
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasAbarrotesBuenavistaModels();
             require_once "views/roles/Admin/header1.view.php";
             require_once "views/modules/sumar_facturas/TotalAbarrotesBV.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE ABARROTES BUENAVISTA
+
+        public function ConsultarTotalMensualFacturasAbarrotesBuenavistaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesAbarrotesBuenavistaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesAbarrotesBuenavista.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
 
@@ -276,6 +296,16 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE FRUVER BUENAVISTA
+
+        public function ConsultarTotalMensualFacturasFruverBuenavistaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesFruverBuenavistaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesFruverBuenavista.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
         #CONSULTAR EL TOTAL DE LAS FACTURAS DE CARNES BUENAVISTA
 
         public function ConsultarTotalFacturasCarnesBuenavistaControllers(){
@@ -283,6 +313,16 @@
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasCarnesBuenavistaModels();
             require_once "views/roles/Admin/header1.view.php";
             require_once "views/modules/sumar_facturas/TotalCarnesBV.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE CARNES BUENAVISTA
+
+        public function ConsultarTotalMensualFacturasCarnesBuenavistaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesCarnesBuenavistaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesCarnesBuenavista.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
 
