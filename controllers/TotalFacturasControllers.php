@@ -5,6 +5,8 @@
         public function index(){
             header("Location: ?c=Dashboard");
         }
+
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE PULPAS NUEVO CHILE
         
         public function ConsultarTotalFacturasPulpasNuevoChileControllers(){
             $facturasTotal = new TotalFacturas;            
@@ -14,6 +16,8 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE PULPAS NUEVO CHILE
+
         public function ConsultarTotalMensualFacturasPulpasNuevoChileControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesPulpasNuevoChileModels();
@@ -21,6 +25,8 @@
             require_once "views/modules/sumar_facturas/TotalMesPulpas.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
+
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE CARNES NUEVO CHILE
 
         public function ConsultarTotalFacturasCarnesNuevoChileControllers(){
             $facturasTotal = new TotalFacturas;            
@@ -30,6 +36,8 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE CARNES NUEVO CHILE
+
         public function ConsultarTotalMensualFacturasCarnesNuevoChileControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesCarnesNuevoChileModels();
@@ -37,6 +45,8 @@
             require_once "views/modules/sumar_facturas/TotalMensualCarnesNC.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
+
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE ABARROTES NUEVO CHILE
 
         public function ConsultarTotalFacturasAbarrotesNuevoChileControllers(){
             $facturasTotal = new TotalFacturas;            
@@ -46,6 +56,8 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE ABARROTES NUEVO CHILE
+
         public function ConsultarTotalMensualFacturasAbarrotesNuevoChileControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesAbarrotesNuevoChileModels();
@@ -53,6 +65,8 @@
             require_once "views/modules/sumar_facturas/TotalMensualAbarrotesNC.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
+
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE FRUVER NUEVO CHILE
 
         public function ConsultarTotalFacturasFruverNuevoChileControllers(){
             $facturasTotal = new TotalFacturas;            
@@ -62,6 +76,8 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE FRUVER NUEVO CHILE
+
         public function ConsultarTotalMensualFacturasFruverNuevoChileControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesFruverNuevoChileModels();
@@ -70,6 +86,7 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE LACTEOS NUEVO CHILE
 
         public function ConsultarTotalFacturasLacteosNuevoChileControllers(){
             $facturasTotal = new TotalFacturas;            
@@ -79,6 +96,8 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE LACTEOS NUEVO CHILE
+
         public function ConsultarTotalMensualFacturasLacteosNuevoChileControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesLacteosNuevoChileModels();
@@ -86,6 +105,8 @@
             require_once "views/modules/sumar_facturas/TotalMesLacteosNC.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
+
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE POLLO NUEVO CHILE
 
         public function ConsultarTotalFacturasPolloNuevoChileControllers(){
             $facturasTotal = new TotalFacturas;            
@@ -95,6 +116,8 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE POLLO NUEVO CHILE
+
         public function ConsultarTotalMensualFacturasPolloNuevoChileControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesPolloNuevoChileModels();
@@ -102,6 +125,8 @@
             require_once "views/modules/sumar_facturas/TotalMesPolloNC.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
+
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE PULPAS SEMILLAS
 
         public function ConsultarTotalFacturasPulpasSemillasControllers(){
             $facturasTotal = new TotalFacturas;            
@@ -111,6 +136,8 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE ABARROTES SEMILLAS
+
         public function ConsultarTotalFacturasAbarrotesSemillasControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasAbarrotesSemillasModels();
@@ -118,6 +145,8 @@
             require_once "views/modules/sumar_facturas/TotalAbarrotesSM.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
+
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE FRUVER SEMILLAS
 
         public function ConsultarTotalFacturasFruverSemillasControllers(){
             $facturasTotal = new TotalFacturas;            
@@ -127,6 +156,8 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE CARNES SEMILLAS
+
         public function ConsultarTotalFacturasCarnesSemillasControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasCarnesSemillasModels();
@@ -134,6 +165,8 @@
             require_once "views/modules/sumar_facturas/TotalCarnesSM.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
+
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE LACTEOS SEMILLAS
 
         public function ConsultarTotalFacturasLacteosSemillasControllers(){
             $facturasTotal = new TotalFacturas;            
@@ -143,6 +176,8 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE POLLO SEMILLAS
+
         public function ConsultarTotalFacturasPolloSemillasControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasPolloSemillasModels();
@@ -150,6 +185,8 @@
             require_once "views/modules/sumar_facturas/TotalPolloSM.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
+
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE PULPAS BUENAVISTA
 
         public function ConsultarTotalFacturasPulpasBuenavistaControllers(){
             $facturasTotal = new TotalFacturas;            
@@ -159,6 +196,8 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE ABARROTES BUENAVISTA
+
         public function ConsultarTotalFacturasAbarrotesBuenavistaControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasAbarrotesBuenavistaModels();
@@ -166,6 +205,8 @@
             require_once "views/modules/sumar_facturas/TotalAbarrotesBV.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
+
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE FRUVER BUENAVISTA
 
         public function ConsultarTotalFacturasFruverBuenavistaControllers(){
             $facturasTotal = new TotalFacturas;            
@@ -175,6 +216,8 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE CARNES BUENAVISTA
+
         public function ConsultarTotalFacturasCarnesBuenavistaControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasCarnesBuenavistaModels();
@@ -182,6 +225,8 @@
             require_once "views/modules/sumar_facturas/TotalCarnesBV.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
+
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE LACTEOS BUENAVISTA
 
         public function ConsultarTotalFacturasLacteosBuenavistaControllers(){
             $facturasTotal = new TotalFacturas;            
@@ -191,6 +236,8 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE POLLO BUENAVISTA
+
         public function ConsultarTotalFacturasPolloBuenavistaControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasPolloBuenavistaModels();
@@ -198,6 +245,8 @@
             require_once "views/modules/sumar_facturas/TotalPolloBV.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
+
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE PULPAS SANTA CECILIA
 
         public function ConsultarTotalFacturasPulpasSantaCeciliaControllers(){
             $facturasTotal = new TotalFacturas;            
@@ -207,6 +256,8 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE ABARROTES SANTA CECILIA
+
         public function ConsultarTotalFacturasAbarrotesSantaCeciliaControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasAbarrotesSantaCeciliaModels();
@@ -214,6 +265,8 @@
             require_once "views/modules/sumar_facturas/TotalAbarrotesSantaCecilia.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
+
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE FRUVER SANTA CECILIA
 
         public function ConsultarTotalFacturasFruverSantaCeciliaControllers(){
             $facturasTotal = new TotalFacturas;            
@@ -223,6 +276,8 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE CARNES SANTA CECILIA
+
         public function ConsultarTotalFacturasCarnesSantaCeciliaControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasCarnesSantaCeciliaModels();
@@ -230,6 +285,8 @@
             require_once "views/modules/sumar_facturas/TotalCarnesSantaCecilia.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
+
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE LACTEOS SANTA CECILIA
 
         public function ConsultarTotalFacturasLacteosSantaCeciliaControllers(){
             $facturasTotal = new TotalFacturas;            
@@ -239,6 +296,8 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE POLLO SANTA CECILIA
+
         public function ConsultarTotalFacturasPolloSantaCeciliaControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasPolloSantaCeciliaModels();
@@ -246,6 +305,8 @@
             require_once "views/modules/sumar_facturas/TotalPolloSantaCecilia.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
+
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE TODOS LOS COMEDORES.
 
         public function ConsultarTotalFacturasControllers(){
             $facturasTotal = new TotalFacturas;            
