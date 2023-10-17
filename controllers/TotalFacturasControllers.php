@@ -14,11 +14,27 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        public function ConsultarTotalMensualFacturasPulpasNuevoChileControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesPulpasNuevoChileModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesPulpas.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
         public function ConsultarTotalFacturasCarnesNuevoChileControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasCarnesNuevoChileModels();
             require_once "views/roles/Admin/header1.view.php";
             require_once "views/modules/sumar_facturas/TotalCarnesNC.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        public function ConsultarTotalMensualFacturasCarnesNuevoChileControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesCarnesNuevoChileModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMensualCarnesNC.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
 
@@ -30,6 +46,14 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        public function ConsultarTotalMensualFacturasAbarrotesNuevoChileControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesAbarrotesNuevoChileModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMensualAbarrotesNC.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
         public function ConsultarTotalFacturasFruverNuevoChileControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasFruverNuevoChileModels();
@@ -37,6 +61,15 @@
             require_once "views/modules/sumar_facturas/TotalFruverNC.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
+
+        public function ConsultarTotalMensualFacturasFruverNuevoChileControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesFruverNuevoChileModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMensualFruver.NC.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
 
         public function ConsultarTotalFacturasLacteosNuevoChileControllers(){
             $facturasTotal = new TotalFacturas;            
