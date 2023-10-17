@@ -4,6 +4,7 @@
 		<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; TOTAL LACTEOS NUEVO CHILE
 		<hr>
 		<a href="?c=FacturasControllers&a=consultarFacturasControllersNuevoChileReporte" class="btn btn-secondary">Atrás</a>
+		<a href="?c=TotalFacturasControllers&a=ConsultarTotalMensualFacturasLacteosNuevoChileControllers" class="btn btn-success">VALOR MENSUAL LACTEOS</a>&nbsp;
 	</h3>
 	
 </div>

@@ -79,11 +79,27 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        public function ConsultarTotalMensualFacturasLacteosNuevoChileControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesLacteosNuevoChileModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesLacteosNC.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
         public function ConsultarTotalFacturasPolloNuevoChileControllers(){
             $facturasTotal = new TotalFacturas;            
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasPolloNuevoChileModels();
             require_once "views/roles/Admin/header1.view.php";
             require_once "views/modules/sumar_facturas/TotalPolloNC.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        public function ConsultarTotalMensualFacturasPolloNuevoChileControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesPolloNuevoChileModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesPolloNC.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
 

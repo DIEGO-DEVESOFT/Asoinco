@@ -1,10 +1,9 @@
 <!-- Page header -->
 <div class="full-box page-header">
 	<h3 class="text-left">
-		<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; TOTAL CARNES NUEVO CHILE
+		<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; TOTAL MES FACTURAS POLLO NUEVO CHILE
 		<hr>
-		<a href="?c=FacturasControllers&a=consultarFacturasControllersNuevoChileReporte" class="btn btn-secondary">Atrás</a>
-		<a href="?c=TotalFacturasControllers&a=ConsultarTotalMensualFacturasCarnesNuevoChileControllers" class="btn btn-success">VALOR MENSUAL CARNES</a>&nbsp;
+		<a href="?c=TotalFacturasControllers&a=ConsultarTotalFacturasPolloNuevoChileControllers" class="btn btn-secondary">Atrás</a>
 	</h3>
 </div>
 <!-- Content -->
@@ -13,14 +12,18 @@
 		<table class="table table-dark table-sm">
 			<thead>
 				<tr class="text-center roboto-medium">
-					<th>Valor Total</th>
+					<th>Año/Mes</th>
+					<th>Valor Mes</th>
 					<th>Nombre Categoria</th>
-					<th>Nombre Comedor</th>
+                    <th>Nombre Comedor</th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php foreach ($facturasTotal as $facturasTotal): ?>
 					<tr class="text-center">
+                        <td>
+							<?php echo $facturasTotal->getFechaMesFactura(); ?>
+						</td>
 						<td>
 							<?php echo $facturasTotal->getvalor_factura(); ?>
 						</td>
@@ -30,6 +33,7 @@
                         <td>
 							<?php echo $facturasTotal->getnombre_comedor(); ?>
 						</td>
+                        
 					</tr>
 					</tr>
 				<?php endforeach; ?>
