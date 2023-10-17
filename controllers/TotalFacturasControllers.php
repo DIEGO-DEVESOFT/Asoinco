@@ -136,6 +136,16 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE PULPAS SEMILLAS
+
+        public function ConsultarTotalMensualFacturasPulpasSemillasControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesPulpasSemillasModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesPulpasSemillas.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
         #CONSULTAR EL TOTAL DE LAS FACTURAS DE ABARROTES SEMILLAS
 
         public function ConsultarTotalFacturasAbarrotesSemillasControllers(){
@@ -143,6 +153,16 @@
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasAbarrotesSemillasModels();
             require_once "views/roles/Admin/header1.view.php";
             require_once "views/modules/sumar_facturas/TotalAbarrotesSM.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE ABARROTES SEMILLAS
+
+        public function ConsultarTotalMensualFacturasAbarrotesSemillasControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesAbarrotesSemillasModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesAbarrotesSemillas.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
 

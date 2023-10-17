@@ -4,6 +4,7 @@
 		<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; TOTAL PULPAS SEMILLAS
 		<hr>
 		<a href="?c=FacturasControllers&a=consultarFacturasControllersSemillasReporte" class="btn btn-secondary">Atrás</a>
+		<a href="?c=TotalFacturasControllers&a=ConsultarTotalMensualFacturasPulpasSemillasControllers" class="btn btn-success">VALOR MENSUAL PULPAS</a>&nbsp;
 	</h3>
 	
 </div>
