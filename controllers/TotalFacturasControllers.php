@@ -336,6 +336,16 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE LACTEOS BUENAVISTA
+
+        public function ConsultarTotalMensualFacturasLacteosBuenavistaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesLacteosBuenavistaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesLacteosBuenavista.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
         #CONSULTAR EL TOTAL DE LAS FACTURAS DE POLLO BUENAVISTA
 
         public function ConsultarTotalFacturasPolloBuenavistaControllers(){
@@ -343,6 +353,16 @@
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasPolloBuenavistaModels();
             require_once "views/roles/Admin/header1.view.php";
             require_once "views/modules/sumar_facturas/TotalPolloBV.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE POLLO BUENAVISTA
+
+        public function ConsultarTotalMensualFacturasPolloBuenavistaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesPolloBuenavistaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesPolloBuenavista.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
 
