@@ -123,6 +123,29 @@
             }
         }
 
+        #Sumar Facturas Abarrotes Nuevo Chile
+
+        public function ConsultarTotalFacturasAbarrotesNuevoChileModels() {
+            try {
+                $facturaTotalList = [];
+                $sql = 'SELECT SUM(valor_factura) AS ValorTotalAbarrotesNuevoChile, comedores.nombre_comedor, categorias.nombre_categoria
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 2 AND categorias.categoria_codigo = 5';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalList[] = new TotalFacturas(
+                        $facturaTotal['ValorTotalAbarrotesNuevoChile'],
+                        $facturaTotal['nombre_categoria'],
+                        $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
         #Sumar Facturas Mensual Abarrotes Nuevo Chile
 
         public function ConsultarTotalFacturasMesAbarrotesNuevoChileModels() {
@@ -151,6 +174,29 @@
             }
         }
 
+        #Sumar Facturas Fruver Nuevo Chile
+
+        public function ConsultarTotalFacturasFruverNuevoChileModels() {
+            try {
+                $facturaTotalList = [];
+                $sql = 'SELECT SUM(valor_factura) AS ValorTotalFruverNuevoChile, comedores.nombre_comedor, categorias.nombre_categoria
+                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                              WHERE facturas.comedores_codigo = 2 AND categorias.categoria_codigo = 4';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalList[] = new TotalFacturas(
+                        $facturaTotal['ValorTotalFruverNuevoChile'],
+                        $facturaTotal['nombre_categoria'],
+                        $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
         #Sumar Facturas Mensual Fruver Nuevo Chile
 
         public function ConsultarTotalFacturasMesFruverNuevoChileModels() {
@@ -164,34 +210,6 @@
                  FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
                                INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
                                WHERE facturas.comedores_codigo = 2 AND categorias.categoria_codigo = 4 GROUP BY mes';
-                $stmt = $this->dbh->query($sql);
-                foreach ($stmt->fetchAll() as $facturaTotal) {
-                    $facturaTotalMesList[] = new TotalFacturas(
-                        $facturaTotal['mes'],
-                        $facturaTotal['ValorMensualCategorias'],
-                        $facturaTotal['nombre_categoria'],
-                        $facturaTotal['nombre_comedor'],
-                    );
-                }
-                return $facturaTotalMesList;
-            } catch (Exception $e) {
-                die($e->getMessage());
-            }
-        }
-
-        #Sumar Facturas Mensual Carnes Nuevo Chile
-
-        public function ConsultarTotalFacturasMesCarnesNuevoChileModels() {
-            try {
-                $facturaTotalMesList = [];
-                 $sql = 'SELECT 
-                 DATE_FORMAT(facturas.fecha,"%Y-%m") AS mes,
-                 SUM(facturas.valor_factura) AS ValorMensualCategorias, 
-                 comedores.nombre_comedor, 
-                 categorias.nombre_categoria
-                 FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
-                               INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
-                               WHERE facturas.comedores_codigo = 2 AND categorias.categoria_codigo = 2 GROUP BY mes';
                 $stmt = $this->dbh->query($sql);
                 foreach ($stmt->fetchAll() as $facturaTotal) {
                     $facturaTotalMesList[] = new TotalFacturas(
@@ -230,47 +248,35 @@
             }
         }
 
-        public function ConsultarTotalFacturasAbarrotesNuevoChileModels() {
+        #Sumar Facturas Mensual Carnes Nuevo Chile
+
+        public function ConsultarTotalFacturasMesCarnesNuevoChileModels() {
             try {
-                $facturaTotalList = [];
-                $sql = 'SELECT SUM(valor_factura) AS ValorTotalAbarrotesNuevoChile, comedores.nombre_comedor, categorias.nombre_categoria
-                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
-                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
-                              WHERE facturas.comedores_codigo = 2 AND categorias.categoria_codigo = 5';
+                $facturaTotalMesList = [];
+                 $sql = 'SELECT 
+                 DATE_FORMAT(facturas.fecha,"%Y-%m") AS mes,
+                 SUM(facturas.valor_factura) AS ValorMensualCategorias, 
+                 comedores.nombre_comedor, 
+                 categorias.nombre_categoria
+                 FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                               INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                               WHERE facturas.comedores_codigo = 2 AND categorias.categoria_codigo = 2 GROUP BY mes';
                 $stmt = $this->dbh->query($sql);
                 foreach ($stmt->fetchAll() as $facturaTotal) {
-                    $facturaTotalList[] = new TotalFacturas(
-                        $facturaTotal['ValorTotalAbarrotesNuevoChile'],
+                    $facturaTotalMesList[] = new TotalFacturas(
+                        $facturaTotal['mes'],
+                        $facturaTotal['ValorMensualCategorias'],
                         $facturaTotal['nombre_categoria'],
                         $facturaTotal['nombre_comedor'],
                     );
                 }
-                return $facturaTotalList;
+                return $facturaTotalMesList;
             } catch (Exception $e) {
                 die($e->getMessage());
             }
         }
 
-        public function ConsultarTotalFacturasFruverNuevoChileModels() {
-            try {
-                $facturaTotalList = [];
-                $sql = 'SELECT SUM(valor_factura) AS ValorTotalFruverNuevoChile, comedores.nombre_comedor, categorias.nombre_categoria
-                FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
-                              INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
-                              WHERE facturas.comedores_codigo = 2 AND categorias.categoria_codigo = 4';
-                $stmt = $this->dbh->query($sql);
-                foreach ($stmt->fetchAll() as $facturaTotal) {
-                    $facturaTotalList[] = new TotalFacturas(
-                        $facturaTotal['ValorTotalFruverNuevoChile'],
-                        $facturaTotal['nombre_categoria'],
-                        $facturaTotal['nombre_comedor'],
-                    );
-                }
-                return $facturaTotalList;
-            } catch (Exception $e) {
-                die($e->getMessage());
-            }
-        }
+        #Sumar Facturas Lacteos Nuevo Chile
 
         public function ConsultarTotalFacturasLacteosNuevoChileModels() {
             try {
@@ -321,6 +327,8 @@
             }
         }
 
+        #Sumar Facturas Pollo Nuevo Chile
+
         public function ConsultarTotalFacturasPolloNuevoChileModels() {
             try {
                 $facturaTotalList = [];
@@ -369,6 +377,8 @@
                 die($e->getMessage());
             }
         }
+
+        #Sumar Facturas Pulpas Semillas
 
         public function ConsultarTotalFacturasPulpasSemillasModels() {
             try {
@@ -419,6 +429,8 @@
             }
         }
 
+        #Sumar Facturas Abarrotes Semillas
+
         public function ConsultarTotalFacturasAbarrotesSemillasModels() {
             try {
                 $facturaTotalList = [];
@@ -467,6 +479,8 @@
                 die($e->getMessage());
             }
         }
+
+        #Sumar Facturas Fruver Semillas
 
         public function ConsultarTotalFacturasFruverSemillasModels() {
             try {
@@ -517,6 +531,8 @@
             }
         }
 
+        #Sumar Facturas Carnes Semillas
+
         public function ConsultarTotalFacturasCarnesSemillasModels() {
             try {
                 $facturaTotalList = [];
@@ -565,6 +581,8 @@
                 die($e->getMessage());
             }
         }
+
+        #Sumar Facturas Lacteos Semillas
 
         public function ConsultarTotalFacturasLacteosSemillasModels() {
             try {
@@ -615,6 +633,8 @@
             }
         }
 
+        #Sumar Facturas Pollo Semillas
+
         public function ConsultarTotalFacturasPolloSemillasModels() {
             try {
                 $facturaTotalList = [];
@@ -664,6 +684,8 @@
             }
         }
 
+        #Sumar Facturas Pulpas Buenavista
+
         public function ConsultarTotalFacturasPulpasBuenavistaModels() {
             try {
                 $facturaTotalList = [];
@@ -684,6 +706,8 @@
                 die($e->getMessage());
             }
         }
+
+        #Sumar Facturas Abarrotes Buenavista
 
         public function ConsultarTotalFacturasAbarrotesBuenavistaModels() {
             try {
@@ -706,6 +730,8 @@
             }
         }
 
+        #Sumar Facturas Fruver Buenavista
+
         public function ConsultarTotalFacturasFruverBuenavistaModels() {
             try {
                 $facturaTotalList = [];
@@ -726,6 +752,8 @@
                 die($e->getMessage());
             }
         }
+
+        #Sumar Facturas Carnes Buenavista
 
         public function ConsultarTotalFacturasCarnesBuenavistaModels() {
             try {
@@ -748,6 +776,8 @@
             }
         }
 
+        #Sumar Facturas Lacteos Buenavista
+
         public function ConsultarTotalFacturasLacteosBuenavistaModels() {
             try {
                 $facturaTotalList = [];
@@ -768,6 +798,8 @@
                 die($e->getMessage());
             }
         }
+
+        #Sumar Facturas Pollo Buenavista
 
         public function ConsultarTotalFacturasPolloBuenavistaModels() {
             try {
@@ -790,6 +822,8 @@
             }
         }
 
+        #Sumar Facturas Pulpas Santa Cecilia
+
         public function ConsultarTotalFacturasPulpasSantaCeciliaModels() {
             try {
                 $facturaTotalList = [];
@@ -810,6 +844,8 @@
                 die($e->getMessage());
             }
         }
+
+        #Sumar Facturas Abarrotes Santa Cecilia
 
         public function ConsultarTotalFacturasAbarrotesSantaCeciliaModels() {
             try {
@@ -832,6 +868,8 @@
             }
         }
 
+        #Sumar Facturas Fruver Santa Cecilia
+
         public function ConsultarTotalFacturasFruverSantaCeciliaModels() {
             try {
                 $facturaTotalList = [];
@@ -852,6 +890,8 @@
                 die($e->getMessage());
             }
         }
+
+        #Sumar Facturas Carnes Santa Cecilia
 
         public function ConsultarTotalFacturasCarnesSantaCeciliaModels() {
             try {
@@ -874,6 +914,8 @@
             }
         }
 
+        #Sumar Facturas Lacteos Santa Cecilia
+
         public function ConsultarTotalFacturasLacteosSantaCeciliaModels() {
             try {
                 $facturaTotalList = [];
@@ -894,6 +936,8 @@
                 die($e->getMessage());
             }
         }
+
+        #Sumar Facturas Pollo Santa Cecilia
 
         public function ConsultarTotalFacturasPolloSantaCeciliaModels() {
             try {
