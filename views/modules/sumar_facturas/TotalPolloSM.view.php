@@ -4,6 +4,7 @@
 		<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; TOTAL POLLO SEMILLAS
 		<hr>
 		<a href="?c=FacturasControllers&a=consultarFacturasControllersSemillasReporte" class="btn btn-secondary">Atrás</a>
+		<a href="?c=TotalFacturasControllers&a=ConsultarTotalMensualFacturasPolloSemillasControllers" class="btn btn-success">VALOR MENSUAL POLLO</a>&nbsp;
 	</h3>
 	
 </div>

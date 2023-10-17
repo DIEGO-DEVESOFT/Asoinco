@@ -489,7 +489,7 @@
             }
         }
 
-        #Sumar Facturas Mensual Abarrotes Semillas
+        #Sumar Facturas Mensual Fruver Semillas
 
         public function ConsultarTotalFacturasMesFruverSemillasModels() {
             try {
@@ -538,6 +538,34 @@
             }
         }
 
+        #Sumar Facturas Mensual Carnes Semillas
+
+        public function ConsultarTotalFacturasMesCarnesSemillasModels() {
+            try {
+                $facturaTotalMesList = [];
+                 $sql = 'SELECT 
+                 DATE_FORMAT(facturas.fecha,"%Y-%m") AS mes,
+                 SUM(facturas.valor_factura) AS ValorMensualCategorias, 
+                 comedores.nombre_comedor, 
+                 categorias.nombre_categoria
+                 FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                               INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                               WHERE facturas.comedores_codigo = 3 AND categorias.categoria_codigo = 2 GROUP BY mes';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalMesList[] = new TotalFacturas(
+                        $facturaTotal['mes'],
+                        $facturaTotal['ValorMensualCategorias'],
+                        $facturaTotal['nombre_categoria'],
+                        $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalMesList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
         public function ConsultarTotalFacturasLacteosSemillasModels() {
             try {
                 $facturaTotalList = [];
@@ -559,6 +587,34 @@
             }
         }
 
+        #Sumar Facturas Mensual Lacteos Semillas
+
+        public function ConsultarTotalFacturasMesLacteosSemillasModels() {
+            try {
+                $facturaTotalMesList = [];
+                 $sql = 'SELECT 
+                 DATE_FORMAT(facturas.fecha,"%Y-%m") AS mes,
+                 SUM(facturas.valor_factura) AS ValorMensualCategorias, 
+                 comedores.nombre_comedor, 
+                 categorias.nombre_categoria
+                 FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                               INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                               WHERE facturas.comedores_codigo = 3 AND categorias.categoria_codigo = 3 GROUP BY mes';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalMesList[] = new TotalFacturas(
+                        $facturaTotal['mes'],
+                        $facturaTotal['ValorMensualCategorias'],
+                        $facturaTotal['nombre_categoria'],
+                        $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalMesList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
         public function ConsultarTotalFacturasPolloSemillasModels() {
             try {
                 $facturaTotalList = [];
@@ -575,6 +631,34 @@
                     );
                 }
                 return $facturaTotalList;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        #Sumar Facturas Mensual Pollo Semillas
+
+        public function ConsultarTotalFacturasMesPolloSemillasModels() {
+            try {
+                $facturaTotalMesList = [];
+                 $sql = 'SELECT 
+                 DATE_FORMAT(facturas.fecha,"%Y-%m") AS mes,
+                 SUM(facturas.valor_factura) AS ValorMensualCategorias, 
+                 comedores.nombre_comedor, 
+                 categorias.nombre_categoria
+                 FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                               INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                               WHERE facturas.comedores_codigo = 3 AND categorias.categoria_codigo = 6 GROUP BY mes';
+                $stmt = $this->dbh->query($sql);
+                foreach ($stmt->fetchAll() as $facturaTotal) {
+                    $facturaTotalMesList[] = new TotalFacturas(
+                        $facturaTotal['mes'],
+                        $facturaTotal['ValorMensualCategorias'],
+                        $facturaTotal['nombre_categoria'],
+                        $facturaTotal['nombre_comedor'],
+                    );
+                }
+                return $facturaTotalMesList;
             } catch (Exception $e) {
                 die($e->getMessage());
             }

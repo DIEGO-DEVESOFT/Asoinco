@@ -196,6 +196,16 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE CARNES SEMILLAS
+
+        public function ConsultarTotalMensualFacturasCarnesSemillasControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesCarnesSemillasModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesCarnesSemillas.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
         #CONSULTAR EL TOTAL DE LAS FACTURAS DE LACTEOS SEMILLAS
 
         public function ConsultarTotalFacturasLacteosSemillasControllers(){
@@ -206,6 +216,16 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE LACTEOS SEMILLAS
+
+        public function ConsultarTotalMensualFacturasLacteosSemillasControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesLacteosSemillasModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesLacteosSemillas.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
         #CONSULTAR EL TOTAL DE LAS FACTURAS DE POLLO SEMILLAS
 
         public function ConsultarTotalFacturasPolloSemillasControllers(){
@@ -213,6 +233,16 @@
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasPolloSemillasModels();
             require_once "views/roles/Admin/header1.view.php";
             require_once "views/modules/sumar_facturas/TotalPolloSM.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE POLLO SEMILLAS
+
+        public function ConsultarTotalMensualFacturasPolloSemillasControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesPolloSemillasModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesPolloSemillas.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
 
