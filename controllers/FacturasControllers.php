@@ -6,9 +6,13 @@
         public function index(){
             header("Location: ?c=Dashboard");
         }
-        
-        #------------REGISTRAR CATEGORIA------------//
+        public function consultarEstadisticas(){  
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/estadisticas/estadisticas.view.php";  
+            require_once "views/roles/admin/footer.view.php";          
+         }
 
+        #------------REGISTRAR CATEGORIA------------//
         public function registrarFacturasControllers(){
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 require_once "views/roles/Admin/header1.view.php";
@@ -29,7 +33,6 @@
         }
 
         #------------CONSULTAR CATEGORIA------------//
-
         public function consultarFacturasControllers(){
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 $facturas = new FacturaModels;
@@ -51,7 +54,6 @@
         }
 
         // Consultar Facturas Nuevo Chile
-
         public function consultarFacturasControllersNuevoChileReporte(){
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 $facturas = new FacturaModels;
@@ -63,8 +65,6 @@
         }
 
         // Consultar Facturas Semillas
-
-
         public function consultarFacturasControllersSemillasReporte(){
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 $facturas = new FacturaModels;
@@ -76,8 +76,6 @@
         }
 
         // Consultar Facturas Buenavista
-
-
         public function consultarFacturasControllersBuenavistaReporte(){
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 $facturas = new FacturaModels;
@@ -89,7 +87,6 @@
         }
 
         // Consultar Facturas Santa Cecilia
-
         public function consultarFacturasControllersSantaCeciliaReporte(){
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 $facturas = new FacturaModels;
@@ -100,10 +97,7 @@
             }            
         }
 
-        
-
         // #-------------- ACTUALIZAR CATEGORIAS ------------- //
-
         // // Actualizar Rol
          public function actualizarFacturasControllers(){
              $rol = $_SESSION['rol'];
@@ -130,16 +124,10 @@
                  header("Location: ?c=Dashboard");
              }            
          }
-
         public function eliminarFacturasControllers(){
              $facturas = new FacturaModels;            
              $facturas->eliminarFacturaModels($_GET['facturas_codigo']);
              header("Location: ?c=FacturasControllers&a=consultarFacturasControllers");
-        }
-
-
-        
-
-              
+        }      
     }
 ?>

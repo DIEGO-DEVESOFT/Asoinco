@@ -376,6 +376,16 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE PULPAS SANTA CECILIA
+
+        public function ConsultarTotalMensualFacturasPulpasSantaCeciliaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesPulpasSantaCeciliaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesPulpasSantaCecilia.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
         #CONSULTAR EL TOTAL DE LAS FACTURAS DE ABARROTES SANTA CECILIA
 
         public function ConsultarTotalFacturasAbarrotesSantaCeciliaControllers(){
@@ -383,6 +393,16 @@
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasAbarrotesSantaCeciliaModels();
             require_once "views/roles/Admin/header1.view.php";
             require_once "views/modules/sumar_facturas/TotalAbarrotesSantaCecilia.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE ABARROTES SANTA CECILIA
+
+        public function ConsultarTotalMensualFacturasAbarrotesSantaCeciliaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesAbarrotesSantaCeciliaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesAbarrotesSantaCecilia.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
 
@@ -396,6 +416,16 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE FRUVER SANTA CECILIA
+
+        public function ConsultarTotalMensualFacturasFruverSantaCeciliaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesFruverSantaCeciliaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesFruverSantaCecilia.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
         #CONSULTAR EL TOTAL DE LAS FACTURAS DE CARNES SANTA CECILIA
 
         public function ConsultarTotalFacturasCarnesSantaCeciliaControllers(){
@@ -403,6 +433,16 @@
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasCarnesSantaCeciliaModels();
             require_once "views/roles/Admin/header1.view.php";
             require_once "views/modules/sumar_facturas/TotalCarnesSantaCecilia.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE CARNES SANTA CECILIA
+
+        public function ConsultarTotalMensualFacturasCarnesSantaCeciliaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesCarnesSantaCeciliaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesCarnesSantaCecilia.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
 
@@ -416,6 +456,16 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE LACTEOS SANTA CECILIA
+
+        public function ConsultarTotalMensualFacturasLacteosSantaCeciliaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesLacteosSantaCeciliaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesLacteosSantaCecilia.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
         #CONSULTAR EL TOTAL DE LAS FACTURAS DE POLLO SANTA CECILIA
 
         public function ConsultarTotalFacturasPolloSantaCeciliaControllers(){
@@ -423,6 +473,16 @@
             $facturasTotal = $facturasTotal->ConsultarTotalFacturasPolloSantaCeciliaModels();
             require_once "views/roles/Admin/header1.view.php";
             require_once "views/modules/sumar_facturas/TotalPolloSantaCecilia.view.php";
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
+        #CONSULTAR EL TOTAL DE CADA MES DE LAS FACTURAS DE POLLO SANTA CECILIA
+
+        public function ConsultarTotalMensualFacturasPolloSantaCeciliaControllers(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ConsultarTotalFacturasMesPolloSantaCeciliaModels();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/sumar_facturas/TotalMesPolloSantaCecilia.view.php";
             require_once "views/roles/admin/footer.view.php";   
         }
 

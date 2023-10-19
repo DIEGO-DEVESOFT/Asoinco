@@ -4,6 +4,7 @@
 		<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; TOTAL ABARROTES SANTA CECILIA
 		<hr>
 		<a href="?c=FacturasControllers&a=consultarFacturasControllersSantaCeciliaReporte" class="btn btn-secondary">Atrás</a>
+		<a href="?c=TotalFacturasControllers&a=ConsultarTotalMensualFacturasAbarrotesSantaCeciliaControllers" class="btn btn-success">VALOR MENSUAL ABARROTES</a>&nbsp;
 	</h3>
 	
 </div>

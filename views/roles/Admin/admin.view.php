@@ -76,6 +76,8 @@
 
                             <a href="?c=FacturasControllers&a=consultarFacturasControllers" class="btn btn-success padin1">CONSULTAR FACTURAS</a>
 
+                            <a href="?c=FacturasControllers&a=consultarEstadisticas" class="btn btn-success padin1">CONSULTAR ESTADISTICAS</a>
+
                             
                             
                         </div>
