@@ -71,6 +71,34 @@
         public function getFechaMesFactura(){
             return $this->FechaMesFactura;
         }
+
+        #modelo reporte pulpas
+
+      
+
+         public function ReportePulpas() {
+            $facturaTotalList = [];
+            $sql = 'SELECT SUM(valor_factura) AS ValorTotalPulpasNuevoChile, comedores.nombre_comedor, categorias.nombre_categoria
+            FROM facturas INNER JOIN comedores ON comedores.comedores_codigo = facturas.comedores_codigo
+                          INNER JOIN categorias ON categorias.categoria_codigo = facturas.categoria_codigo 
+                          WHERE facturas.comedores_codigo = 2 AND categorias.categoria_codigo = 1';
+            $stmt = $this->dbh->query($sql);
+            $stmt->execute();
+            foreach ($stmt->fetchAll(PDO::FETCH_ASSOC) as $facturaTotal) {
+                $facturaTotalList[] = new TotalFacturas(
+                    $facturaTotal['ValorTotalPulpasNuevoChile'],
+                    $facturaTotal['nombre_categoria'],
+                    $facturaTotal['nombre_comedor'],
+                );
+                
+            }
+
+            return $facturaTotalList;
+            
+            
+         }
+
+
         
         #Sumar Facturas Pulpas Nuevo Chile
 

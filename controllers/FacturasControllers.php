@@ -6,11 +6,6 @@
         public function index(){
             header("Location: ?c=Dashboard");
         }
-        public function consultarEstadisticas(){  
-            require_once "views/roles/Admin/header1.view.php";
-            require_once "views/modules/estadisticas/estadisticas.view.php";  
-            require_once "views/roles/admin/footer.view.php";          
-         }
 
         #------------REGISTRAR CATEGORIA------------//
         public function registrarFacturasControllers(){

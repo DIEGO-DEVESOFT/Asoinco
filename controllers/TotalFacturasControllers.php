@@ -496,6 +496,16 @@
             require_once "views/roles/admin/footer.view.php";   
         }
 
+        #CONSULTAR EL TOTAL DE LAS FACTURAS DE TODOS LOS COMEDORES.
+
+        public function ConsultarEstadisticas(){
+            $facturasTotal = new TotalFacturas;            
+            $facturasTotal = $facturasTotal->ReportePulpas();
+            require_once "views/roles/Admin/header1.view.php";
+            require_once "views/modules/estadisticas/estadisticas.view.php";  
+            require_once "views/roles/admin/footer.view.php";   
+        }
+
               
     }
 ?>
